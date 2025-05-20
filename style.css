@@ -1,0 +1,313 @@
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    
+    background-image: url('23.jpg'); /* Fixed syntax */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #1b0606;
+    line-height: 1.6;
+  }
+  
+  /* Header */
+  header {
+  
+    color: #0216f5;
+    padding: 3em 1em;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    transition: background 0.3s ease;
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5em;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  /* Navigation */
+  nav {
+   
+    text-align: center;
+    padding: 1.5em 1em;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  nav a {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 400;
+    transition: all 0.3s ease;
+  }
+  
+  nav a:hover {
+    background-color: #000;
+    color: #3608ee;
+    transform: translateY(-2px);
+  }
+  
+  /* Section Styles */
+  section {
+    padding: 2.5em 1.5em;
+    max-width: 900px;
+    margin: 2em auto;
+  
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(90, 89, 89, 0.06);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  section:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    color: #7808ef;
+    text-align: center;
+    margin-bottom: 1em;
+    font-size: 2rem;
+  }
+  
+  /* Profile Image */
+  img.profile-pic {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 1em;
+    
+    transition: transform 0.3s ease;
+  }
+  
+  img.profile-pic:hover {
+    transform: scale(1.05);
+  }
+  
+  /* List Styling */
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  li {
+    margin-bottom: 0.8em;
+    font-size: 1rem;
+  }
+  
+  /* Button Group */
+  .button-group {
+    text-align: center;
+    margin-top: 2em;
+  }
+  
+  .button-group a {
+    background-color: #000;
+    color: #daf109;
+    padding: 0.8em 1.6em;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0.5em;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .button-group a:hover {
+    background-color: #333;
+    transform: scale(1.05);
+  }
+  
+  /* Back to Top */
+  #back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #000;
+    color: #fff;
+    padding: 0.7em 1.2em;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    
+    display: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  #back-to-top:hover {
+    background-color: #333;
+  }
+  
+  /* Footer */
+  footer {
+    background: #011201;
+    color: #e9ece8;
+    padding: 2em 1em;
+    text-align: center;
+    margin-top: 3em;
+  }
+  
+  footer a {
+    color: #f5ebeb;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+  }
+  
+  footer a:hover {
+    color: #555;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    nav a {
+      display: block;
+      margin: 0.8em auto;
+    }
+  
+    .button-group a {
+      display: block;
+      margin: 1em auto;
+    }
+  
+    section {
+      margin: 1.5em;
+    }
+  
+    header h1 {
+      font-size: 2rem;
+    }
+  }
+  
+  /* Video Section */
+  #video {
+    text-align: center;
+    padding: 2em;
+   
+    border-radius: 12px;
+    margin: 2em auto;
+    max-width: 900px;
+   
+  }
+  
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    
+    margin-bottom: 1.5em;
+  }
+  
+  .video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+  }
+  /* Contact Form Styles */
+.contact-form {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+.contact-form label {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  background-color: #0066cc;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #004d99;
+}
+
+/* Responsive Design for Contact Form */
+@media (max-width: 768px) {
+  .contact-form {
+    padding: 1.5rem;
+  }
+
+  .contact-form button {
+    padding: 0.75rem 1.5rem;
+  }
+}
+/* Google Map Embed Styles */
+.w-full {
+  width: 60%; /* Adjust the width to 80% of the container */
+  max-width: 100%; /* Ensure it doesn't overflow */
+  height: 450px; /* Set a fixed height */
+  margin: 2em auto; /* Center the map horizontally with top and bottom margins */
+  border-radius: 12px; /* Add rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Slight shadow for a subtle effect */
+}
+
+.w-full iframe {
+  width: 100%; /* Make the iframe fill the container */
+  height: 80%; /* Make the iframe take the full height of the container */
+  border-radius: 12px; /* Round corners for the iframe */
+  border: none; /* Remove the border */
+}
+
+@media (max-width: 400px) {
+  .w-full {
+    width: 95%; /* Adjust the width on smaller screens */
+    height: 400px; /* Adjust the height on smaller screens */
+  }
+}
